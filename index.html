@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Untitled MC</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv=“Content-Security-Policy” content=“upgrade-insecure-requests”>
+</head>
+
+<body>
+
+
+
+<style type="text/css">
+
+	.cover {
+
+		width: 10%;
+
+		height: 2%;
+
+		border: 2px solid;
+
+	}
+
+
+
+	.cover:hover {
+
+		animation: change_color 0.5s;
+
+		background-color: #000;
+
+		border-color: #FFF;
+
+	}
+
+
+
+
+
+
+
+	.az {
+
+		width: 100%;
+
+		height: 100%;
+
+		background-color: rgba(0,0,0,0);
+
+		border: 0px;
+
+		margin: 0 auto;
+
+		text-align: center;
+
+		
+
+	}
+
+
+
+	.az {
+
+		width: 100%;
+
+		height: 100%;
+
+		font-family: 楷体;
+
+		font-size: 18px;
+
+		text-decoration:none;
+
+		color: #000
+
+	}
+
+
+
+	.az:hover {
+
+		animation: change_color 0.5s;
+
+		color: #FFF;
+
+	}
+
+
+
+
+
+	@keyframes change_color {
+
+		from {background-color: #FFF;border-color: #000;}
+
+		to {background-color: #000;border-color: #FFF;}
+
+	}
+
+
+
+	@keyframes cg {
+
+		from {color: #000;}
+
+		to {color: #FFF;}
+
+	}
+
+</style>
+
+
+
+<!-- banner的样式 -->
+
+<style type="text/css">
+
+	body {
+
+		/* 去除尿性的Chrome的狗margin */
+
+		margin: 0;
+
+	}
+
+
+
+	.banner {
+
+		text-align: center;
+
+		background-color: #FFF
+
+	}
+
+	.banner_title {
+
+
+
+		font-family: 微软雅黑;
+
+		font-size: 50px;
+
+
+
+		margin-top: 10%;
+
+		color: #FFF;
+
+	}
+
+
+
+	@keyframes move_in {
+
+		from {margin-top: 13%;color: rgba(0,0,0,0);}
+
+		to {margin-top: 10%;color: #FFF;}
+
+	}
+
+
+
+	.bn {
+
+		left: 50%;transform: translateX(-50%);/* 物理居中大法 */
+
+		text-align: center;
+
+		width: 100%;
+
+		animation: move_in 0.8s;
+
+		margin-top: 10%;
+
+		position: absolute;
+
+
+
+	}
+
+
+
+	#slogan {
+
+		font-family: 微软雅黑;
+
+		font-size: 32px;
+
+
+
+
+
+		color: #FFF;
+
+		width: 100%;
+
+	}
+
+
+
+</style>
+
+
+
+<div class="banner">
+
+	<div class="bn">
+
+		<h1 class="banner_title">Untitled Minecraft Server</h1>
+
+
+
+		<div id="slogan" data-text="纯净"></div>
+
+	</div>
+
+
+
+
+
+	<script src='js/jquery.1.7.1.min.js'></script>
+
+	<script src="js/index.js"></script>
+
+	<video class="banner_video" width="100%" autoplay muted>
+
+		<source src="/server_video.mp4" type="video/mp4">
+
+
+
+	</video>
+
+
+
+
+
+
+
+</div>
+
+
+
+<style type="text/css">
+
+	.server_info {
+
+		width: 100%;
+
+		text-align: center;
+
+		padding-top: 2%;
+
+		margin-bottom: 0;
+
+		background-color: #FFF;
+
+		margin-top: 0;
+
+		padding-bottom: 3%;
+
+	}
+
+
+
+	.server_info>h1{
+
+		animation: movein 0.5s;
+
+		margin-top: 0%;
+
+	}
+
+
+
+	.info {
+
+		width: 33%;
+
+		margin: 0 auto;
+
+		text-align: left;
+
+	}
+
+
+
+	@keyframes movein {
+
+		from {margin-top: 10%;}
+
+		to {margin-top: 0%;}
+
+	}
+
+</style>
+
+
+
+<div class="server_info">
+
+	<h1>服务器信息 : </h1>
+
+	<div class="info">
+
+		<h2>当前在线 <span id="online">请稍后...</span></h2>
+
+		<h2>服务器版本 <span id="version">请稍后...</span></h2>
+
+	</div>
+
+
+
+</div>
+
+
+
+<style type="text/css">
+
+	.background {
+
+		z-index: -1;
+
+		position: fixed;
+
+		left: 0%;
+
+		top: 0%;
+
+		width: 100%;
+
+		height: auto;
+
+	}
+
+	.join_us {
+
+		padding-bottom: 5%;
+
+		color: #FFF;
+
+		padding-top: 1%;
+
+		text-align: center;
+
+		background: url(./background.png) repeat-y center;
+
+		background-size: cover;
+
+		background-attachment: fixed;
+
+	}
+
+	.join_us>table {
+
+		width: 100%;
+
+		/*margin: 0 auto;*/
+
+	}
+
+	.join_us>h1 {
+
+		margin-top: 3%;
+
+		margin-bottom: 3%;
+
+	}
+
+
+
+
+
+	.join_us > table > tbody > tr > th > a > img:hover {
+
+		animation: color_change 0.5s;
+
+		background-color: #000;filter: invert(100%);
+
+	}
+
+
+
+	@keyframes color_change {
+
+		from {background-color: rgba(0,0,0,0);}
+
+		to {background-color: #000;filter: invert(100%);}
+
+	}
+
+
+
+</style>
+
+<div class="join_us">
+
+	<!-- <img src="background.png" class="background"> -->
+
+
+
+	<h1>想要加入我们?</h1>
+
+	<table style="text-align: center;">
+
+		<tr>
+
+			<th class="ju">
+
+
+
+				<a href="https://qm.qq.com/cgi-bin/qm/qr?k=HxB6U2s9LBdU1PZXTsLGA-FEylbwSTAj&jump_from=webapi" target="_self"><img src="qq.png" class="qq"></a>
+
+				<h2>加入我们的QQ群</h1>
+
+			</th>
+
+			<th class="ju">
+
+				<a href="whl.html" target="_self"><img src="whl.png" class="whl"></a>
+
+				<h2>在线申请白名单</h2>
+
+			</th>
+
+			<th class="ju">
+
+				<a href="http://mc.uts.world:8123" target="_self"><img src="map.png" class="map"></a>
+
+				<h2>进入我们的卫星图</h2>
+
+
+			</th>
+
+			<th class="ju">
+
+				<a href="https://mc.uts.world:7000/skin" target="_self"><img src="skin.png" class="map"></a>
+
+				<h2>皮肤系统</h2>
+
+
+			</th>
+
+		</tr>
+
+	</table>
+
+</div>
+
+
+
+<!-- <div class="cover">
+
+	<div class="az" id="az">进入地图</div>
+
+</div>
+
+ -->
+
+
+
+<style type="text/css">
+
+	.why_us {
+
+		padding-bottom: 5%;
+
+		width: 100%;
+
+		background: url(./background2.png) repeat-y center;
+
+		background-size: cover;
+
+		background-attachment: fixed;
+
+		text-align: center;
+
+		padding-top: 3%;
+
+
+
+	}
+
+	.why_us > h1 {
+
+		margin-bottom: 3%;
+
+	}
+
+
+
+	.why_us > table {
+
+		width: 100%;
+
+	}
+
+
+
+	.why_us > table > tbody > tr > th > img:hover {
+
+		animation: color_change_ 0.5s;
+
+		background-color: rgba(255,255,255,50);filter: invert(100%);
+
+	}
+
+
+
+	@keyframes color_change_ {
+
+		from {background-color: rgba(0,0,0,0);}
+
+		to {background-color: rgba(255,255,255,50);filter: invert(100%);}
+
+	}
+
+
+
+
+
+	.ju > h2{
+
+		max-width: 50%;
+
+		margin: 0 auto;
+
+	}
+
+
+
+	.ju {
+
+		max-width: 30%;
+
+	}
+
+
+
+</style>
+
+
+
+<div class="why_us">
+
+	<h1>关于我们</h1>
+
+	<p style="font-size: 20px;">Untitled MC是一个高版本纯净生存服 我们以纯净 公益 和谐为核心 让玩家能够获得最佳的游戏体验</p>
+
+	<table style="text-align: center;">
+
+		<tr>
+
+			<th class="ju">
+
+
+
+				<img src="sv.png" class="sv"></a>
+
+				<h2>稳定的服务器</h1>
+
+			</th>
+
+			<th class="ju">
+
+				<img src="pl.png" class="pl">
+
+				<h2>和谐的玩家团体</h2>
+
+			</th>
+
+
+
+			<th class="ju">
+
+				<img src="pl.png" class="pl">
+
+				<h2>各种白嫖活动</h2>
+
+			</th>
+
+
+
+<!-- 			<th class="ju">
+
+				<img src="em.png" class="pl">
+
+				<h2>从不当政的鸽子服主</h2>
+
+
+
+			</th> -->
+
+		</tr>
+
+	</table>
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+
+	function get_online() {
+
+		// 获取当前在线人数
+
+		var xhr = new XMLHttpRequest();
+
+		xhr.open('GET', '//mc.uts.world:5000/info/mc.uts.world', true); 
+
+		xhr.send();
+
+
+
+		xhr.onreadystatechange = function () {
+
+			if (xhr.readyState == 4 && xhr.status == 200) {
+
+				var res = xhr.responseText;//获取到json字符串，解析
+
+				online = res.split("服务器在线人数: ")[1];
+
+				if (online === undefined) {
+
+					online = "出现错误 请联系服主"
+
+				}
+
+
+
+				online = online.split("\n")[0];
+
+				document.getElementById('online').innerHTML=online;
+
+
+
+				version = res.split("服务器版本: ")[1];
+
+				if (version === undefined) {
+
+					version = "出现错误 请联系服主"
+
+				}
+
+				version = version.split("\n")[0];
+
+				document.getElementById('version').innerHTML=version;
+
+
+
+				
+
+			}
+
+		};
+
+	}
+
+	get_online();
+
+	// 定期获取在线人数 并刷新
+
+	setInterval(function(){
+
+		get_online();
+
+	}, 10000);
+
+
+
+	
+
+</script>
+
+
+
+
+
+</body>
+
+
+
+<footer>
+
+	<style type="text/css">
+
+		footer {
+
+			width: 80%;
+
+			margin: 0 auto;
+
+			margin-top: 3%;
+
+			display: flex;
+
+		}
+
+		.power_by{
+
+			list-style-type: none;
+
+			width: 40%;
+
+			margin: 0 auto;
+
+		}
+
+	</style>
+
+	<div class="power_by">
+
+		<h1>感谢以下玩家 为服务器做出巨大贡献</h1>
+
+		<p>(排名无先后次序)</p>
+
+		<ul>
+
+			<li>edub —— 对服务器早期发展做出巨大贡献 同时搭建了部分服务器建筑</li>
+
+			<li>Bruce —— 低价提供了网站服务器</li>
+
+			<li>Esdeat_h —— 红石巨佬 搭建了服务器大部分的机器</li>
+
+			<li>pangtszpok —— 服资本家 为服务器经济建设做出巨大贡献</li>
+
+			<li>ZhuTouJiang —— 插件大佬 为服务器定制了许多插件</li>
+
+			<li>Sakuraj1maMai —— 建筑大佬 搭建了古建筑街(背景图1)</li>
+
+			<li>Zhangjili—— 和Sakuraj1maMai一起搭建了古建筑街</li>
+			<li>Konnotexas —— 为服务器建造了许多建筑</li>
+			<li>xiaosong —— emm 问xiaosong吧/xyx</li>
+
+
+		</ul>
+
+	</div>
+
+	<style type="text/css">
+
+		.other_side {
+
+			margin: 0 auto;
+
+			width: 40%;
+
+		}
+
+	</style>
+
+	<div class="other_side">
+
+		<h1>POWER BY lihe</h1>
+
+		<h1>WEB SERVER PROVIDED BY Bruce</h1>
+
+	</div>
+
+</footer>
+
+</html>
